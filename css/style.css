@@ -14,3 +14,51 @@ body {
 
 
 }
+
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 131px;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  
+  }
+  
+  button {
+    border: none;
+  }
+  
+  
+  
+  .nav-bar {
+    width: 67%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  
+  
+  .title {
+    width: 588px;
+    height: 64px;
+    background: #6688FF;
+    border-radius: 0px 14px 15px 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 74px;
+  
+  }
+  
+  .title h3,
+  p {
+    margin-left: 20px;
+  }
+  

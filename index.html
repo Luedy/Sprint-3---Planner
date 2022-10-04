@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planner Semanal - Sprint 3</title>
 </head>
-<body>
+<body onload="addWatch()">
+
+    <header>
+      <div class="title">
+        <h3>Planejamento Semanal</h3>
+        <p>Utilize o formulário para adicionar novas tarefas:</p>
+      </div>
+      <div class="nav-bar">
+        <div class="actions">
+          <button class="save" onclick="">
+            <p>Salvar localStorage</p>
+          </button>
+          <div class="delete">
+            <p>Excluir localStorage</p>
+          </div>
+        </div>
+        <div class="date-time">
+          <div class="time">
+            <span id='h'></span>:<span id='m'></span>
+          </div>
+          <div class="date"><span id='date'></span></div>
+        </div>
+      </div>
+    </header>
     
 </body>
 </html>

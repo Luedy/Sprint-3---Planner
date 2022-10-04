@@ -69,7 +69,9 @@ header {
   }
   
   .actions>.save {
-    margin-right: 74px;
+    margin-right: 24px;
+    margin-left: 50px;
+
     width: 180px;
     height: 40px;
     background: #2CBE82;

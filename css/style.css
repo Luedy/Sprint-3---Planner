@@ -62,3 +62,68 @@ header {
     margin-left: 20px;
   }
   
+  
+.actions {
+    display: flex;
+  
+  }
+  
+  .actions>.save {
+    margin-right: 74px;
+    width: 180px;
+    height: 40px;
+    background: #2CBE82;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .save:hover {
+    background: #239465;
+    transition: .3s;
+  }
+  
+  .actions>.delete {
+    width: 180px;
+    height: 40px;
+    background: #DA2B40;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 88px;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    background: #bb2436;
+    transition: .3s;
+  }
+  
+  .date-time {
+    width: 241px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  
+  .time {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  
+  }

@@ -85,3 +85,12 @@ function giveDate() {
 
   date.textContent = currentDate;
 }
+
+giveDate();
+
+function favTutorial() {
+  var mylist = document.getElementById("myList");
+  document.getElementById("favourite").value =
+    mylist.options[mylist.selectedIndex].text;
+  console.log(document.getElementById("favourite").value);
+}

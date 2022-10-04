@@ -127,3 +127,89 @@ header {
     margin-bottom: 15px;
   
   }
+
+  
+.date {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .tools {
+    height: 44px;
+    width: 100%;
+    display: flex;
+  
+  }
+  
+  .activity {
+    background-color: white;
+    height: 44px;
+    width: 424px;
+    border: 1px solid #2CBE82;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding-left: 89px;
+  }
+  
+  
+  
+  .hours {
+    width: 102px;
+    height: 44px;
+    background-color: white;
+    border: 1px solid #2CBE82;
+    border-radius: 10px;
+    margin-left: 27px;
+    padding: 15px;
+    cursor: pointer;
+  
+  
+  }
+  
+  
+.add {
+    background: #2CBE82;
+    border-radius: 10px;
+    width: 222px;
+    height: 44px;
+    margin-left: 27px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .add:hover {
+    background: #239465;
+    transition: .3s;
+  }
+  
+  
+  .add img {
+    margin-right: 8px;
+  }
+  
+  .dell {
+    width: 184px;
+    height: 44px;
+    color: white;
+  
+    background: #DA2B40;
+    border-radius: 10px;
+    margin-left: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .dell:hover {
+    background: #bb2436;
+    transition: .3s;
+  }
+  
+  .dell img {
+    margin-right: 8px;
+  }

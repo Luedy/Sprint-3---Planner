@@ -242,3 +242,207 @@ header {
   
   }
   
+  
+
+.schedules {
+    height: 75px;
+    margin-right: 16px;
+  
+    margin-left: 16px;
+  
+  }
+  
+  .days-of-the-week {
+  
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: 75px;
+  
+  }
+  
+  .appointment {
+    width: 90px;
+    height: 75px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 10px !important;
+  
+  }
+  
+  .appointment h3 {
+    font-weight: 400;
+    font-size: 17px;
+  }
+  
+  .make-appointments {
+    width: 85px;
+    height: 75px;
+    margin-top: 9px;
+    background: #6688FF66;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .make-appointments p {
+    margin: 0 auto;
+  }
+  
+  
+  .make-appointments h6 {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+  
+  }
+
+  
+.day0 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #FFA246;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day0:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day1 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #35E185;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day1:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day2 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #6688FF;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day2:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #B266FF;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day3:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day4 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #66D1FF;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day4:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day5 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #FF66D4;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day5:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  
+  .day6 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: white;
+    width: 150px;
+    height: 33px;
+    background: #FF6666;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 9px 9px 0px 0px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+  
+  .day6:hover {
+    width: 157px;
+    height: 36px;
+    transition: .5s;
+  }
+  

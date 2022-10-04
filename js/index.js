@@ -244,7 +244,7 @@ const clearListTask = () => {
     }
   };
 
-  //list tasks
+
 const listTasks = () => {
     clearListTask();
     dataBase.forEach((task, indice) =>
@@ -252,12 +252,12 @@ const listTasks = () => {
     );
   };
 
-  //remove all task
+
 addEventListener("click", (e) => {
     const elemento = e.target;
   });
   
-  //capture out button
+
 addEventListener("click", (e) => {
     const elemento = e.target;
   

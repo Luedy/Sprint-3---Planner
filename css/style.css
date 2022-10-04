@@ -326,6 +326,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #f1902f;
   }
   
   .day1 {
@@ -346,6 +347,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #24aa63;
   }
   
   .day2 {
@@ -366,6 +368,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #456cf8;
   }
   
   .day3 {
@@ -386,6 +389,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #9d43f7;
   }
   
   .day4 {
@@ -406,6 +410,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #38bbf3;
   }
   
   .day5 {
@@ -426,6 +431,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #f53dc1;
   }
   
   .day6 {
@@ -446,6 +452,7 @@ header {
     width: 157px;
     height: 36px;
     transition: .5s;
+    background: #f73f3f;
   }
   
   

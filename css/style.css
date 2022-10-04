@@ -213,3 +213,32 @@ header {
   .dell img {
     margin-right: 8px;
   }
+
+  /* .logo{
+  background-image: url("../images/bola-LogoCompasso_1.svg");
+  width: 825px;
+  height: 825px;
+  background-size: cover;
+  position: fixed;
+
+} */
+.main-section {
+    display: flex;
+    margin-top: 26px;
+    overflow-y: scroll;
+    height: 79%;
+    flex-direction: column;
+    background-image: url("../images/bola-LogoCompasso_1.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 425px;
+  }
+  
+  .internal {
+    display: flex;
+    margin-top: 26px;
+    width: 100%;
+    flex-wrap: wrap;
+  
+  }
+  

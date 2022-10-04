@@ -166,14 +166,14 @@ function createdTask() {
 const dataBase = [];
 
 
-//capture data;
+
 var textContent = document.querySelector(".activity").value;
 var weekDay = document.querySelector("#favourite").value;
 var hours = document.getElementById("input-time").value;
 
 let buttonAdd = document.querySelector(".add");
 
-//create task to facilited!
+
 const createTask = (textContent, hours, weekDay, indice) => {
   let week;
   switch (weekDay) {
@@ -285,7 +285,7 @@ addEventListener("click", (e) => {
 
 
 
-//insert to database
+
 const insertTask = () => {
     let textContent = document.querySelector(".activity").value;
     let weekDay = document.querySelector("#favourite").value;

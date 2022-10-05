@@ -85,7 +85,6 @@ function giveDate() {
 
   date.textContent = currentDate;
 }
-
 giveDate();
 
 function favTutorial() {
@@ -96,84 +95,29 @@ function favTutorial() {
 }
 
 
-function createdTask() {
-    const divideHours = hours.split(":");
-    const formatedHours = divideHours[0] + "h" + divideHours[1] + "m";
-    console.log();
-  
-    const schedule = document.createElement("div");
-    schedule.classList.add("to-do-schedule");
-    schedule.classList.add("teste");
-    const appointment = document.createElement("div");
-    appointment.classList.add("make-appointments");
-    const task = document.createElement("div");
-    task.classList.add("task");
-    schedule.appendChild(appointment);
-    schedule.appendChild(task);
-  
-    switch (weekDay) {
-      case "Segunda-feira":
-        task.classList.add("taskMon");
-        break;
-      case "Terça-feira":
-        task.classList.add("taskTues");
-        break;
-      case "Quarta-feira":
-        task.classList.add("taskWednes");
-        break;
-      case "Quinta-feira":
-        task.classList.add("taskThurs");
-        break;
-      case "Sexta-feira":
-        task.classList.add("taskFri");
-        break;
-      case "Sabado":
-        task.classList.add("taskSatur");
-        break;
-      case "Domingo":
-        task.classList.add("taskSun");
-        break;
-    }
-  
-    //create a forEach to add to the bank "ou seja criar um forEach para adicionar no banco" check
-  
-    //Nesse forEach ele deve criar esse atributo já personalizado check
-  
-    //apagar no banco  check
-  
-    //deletar todos check
-  
-    //criar abasde filtragem personalizadas para listar so os dias e um para default
-  
-    //horarios repetidos deveremos colocar um do lado do outro e colocar uma linha demarcando
-  
-    //finals create localStorege e dellLocalStorege
 
+const dataBase = JSON.parse(localStorage.getItem("scheduleWeek")) ?? [];
+const saveStorage = () => {
+  localStorage.scheduleWeek = JSON.stringify(dataBase);
+};
 
-    appointment.innerHTML = `<h6>${formatedHours}</h6>`;
+const dellStorage = () => {
+  localStorage.removeItem("scheduleWeek");
+};
 
-  task.innerHTML = `  <div class="content">
-    <p>${textContent}</p>
-  </div>
- <button class="out teste"> <!-- Delete -->
-    Apagar
- </button>`;
+buttonDell = document.querySelector(".delete");
+buttonSave = document.querySelector(".save");
+buttonSave.onclick = saveStorage;
+buttonDell.onclick = dellStorage;
 
-  document.querySelector(".schedules").appendChild(schedule);
-}
-
-
-const dataBase = [];
-
-
-
+//capture data;
 var textContent = document.querySelector(".activity").value;
 var weekDay = document.querySelector("#favourite").value;
 var hours = document.getElementById("input-time").value;
 
 let buttonAdd = document.querySelector(".add");
 
-
+//create task to facilited!
 const createTask = (textContent, hours, weekDay, indice) => {
   let week;
   switch (weekDay) {
@@ -200,246 +144,289 @@ const createTask = (textContent, hours, weekDay, indice) => {
       break;
   }
 
-     //console.log(dataBase.filter(task => task.weekDay == "Segunda-feira"))
-
-    
-
-  // if (dataBase.some(task => task.hours == hours) && dataBase.length > 2 ) {
-  //   console.log(hours)
-  //   console.log("cheguei aqui");
-  //   const found = dataBase.findIndex((task) => hours == task.hours);
-  //   // let all = document.querySelectorAll('.to-do-schedule');
-
-  //   // const allDivs = [...all]
-
-  //   let allTwo = document.getElementsByClassName('to-do-schedule');
-  //   allTwo[found]
-  //   console.log(allTwo[found])
-  // }
-  
   const task = document.createElement("div");
   task.classList.add("to-do-schedule");
+  task.classList.add(`testando${indice}`)
   task.innerHTML = ` 
     <div class="make-appointments teste ">
         <p>${hours}</p>
     </div>
-  
     <div class="task ${week}"  >
-      <div class="content">
-        <p>${textContent}</p>
-      </div>
-    <button class="out" data-indice=${indice}> <!-- Delete -->
-        Apagar
-    </button>
+    <div class="content">
+      <p>${textContent}</p>
     </div>
-    `;
-    
-    document.querySelector(".schedules").appendChild(task);
+  <button class="out" data-indice=${indice}> <!-- Delete -->
+      Apagar
+  </button>
+  </div>
+  `;
+
+
+
+
+   
+
+  document.querySelector(".schedules").appendChild(task);             
 };
 
 const clearListTask = () => {
-    const todoSchedule = document.querySelector(".schedules");
-    while (todoSchedule.firstChild) {
-      todoSchedule.removeChild(todoSchedule.lastChild);
-    }
-  };
+  const todoSchedule = document.querySelector(".schedules");
+  while (todoSchedule.firstChild) {
+    todoSchedule.removeChild(todoSchedule.lastChild);
+  }
+};
 
-
+//list tasks
 const listTasks = () => {
-    clearListTask();
-    dataBase.forEach((task, indice) =>
-      createTask(task.textContent, task.hours, task.weekDay, indice)
-    );
-  };
+  clearListTask();
+  dataBase.forEach((task, indice) =>
+    createTask(task.textContent, task.hours, task.weekDay, indice)
+  );
+};
 
-
+//remove all task
 addEventListener("click", (e) => {
-    const elemento = e.target;
-  });
-  
+  const elemento = e.target;
+});
 
+//capture out button
 addEventListener("click", (e) => {
-    const elemento = e.target;
-  
-    if (elemento.classList.contains("out")) {
-      const ind = elemento.dataset.indice;
-      removeItem(ind);
-    }
-  
-    if (elemento.classList.contains("dell")) {
-      while (dataBase.length > 0) {
-        dataBase.forEach((item, indice) => removeItem(indice));
-      }
-      listTasks();
-    }
-  });
+  const elemento = e.target;
 
-  const removeItem = (ind) => {
-    dataBase.splice(ind, 1);
+  if (elemento.classList.contains("out")) {
+    const ind = elemento.dataset.indice;
+    removeItem(ind);
+  }
+
+  if (elemento.classList.contains("dell")) {
+    while (dataBase.length > 0) {
+      dataBase.forEach((item, indice) => removeItem(indice));
+    }
     listTasks();
-  };
+  }
+});
 
-  const addOneSide = () =>{
-  
-}
+const removeItem = (ind) => {
+  dataBase.splice(ind, 1);
+  listTasks();
+};
 
+const addOneSide = () => {};
 
-
-
+//insert to database
 const insertTask = () => {
-    let textContent = document.querySelector(".activity").value;
-    let weekDay = document.querySelector("#favourite").value;
-    let hours = document.getElementById("input-time").value;
-    dataBase.push({
-      hours: `${hours}`,
-      textContent: `${textContent}`,
-      weekDay: `${weekDay}`,
-    });
-    listTasks();
-    // let schedule = document.querySelectorAll(".to-do-schedule");
-    // schedule.forEach((s) => console.log(s.getBoundingClientRect()));
-  };
-  
-  const listTasks2 = () => {
-    clearListTask();
-   
-    fic.forEach((task, indice) =>
-      createTask(task.textContent, task.hours, task.weekDay, indice)
-    );
-    
-  };
+  let activity = document.querySelector(".activity");
+  let days = document.querySelector(".days");
+  let time = document.getElementById("input-time");
 
-  const fic = []
+  let textContent = document.querySelector(".activity").value;
+  let weekDay = document.querySelector("#favourite").value;
+  let hours = document.getElementById("input-time").value;
+
+  const divideHours = hours.split(":");
+  const formatedHours = divideHours[0] + "h" + divideHours[1] + "m";
+
+  const result = dataBase.some((schedule) => schedule.hours == formatedHours);
+  if (result) {
+    const ind = dataBase.findIndex(
+      (schedule) => schedule.hours == formatedHours
+    );
+    if (dataBase[ind].weekDay == weekDay) {
+      alert("horario contido");
+    }
+  }
+
+  if (textContent == "" || textContent == null) {
+    console.log("estou em textcontent");
+
+    if (weekDay == "" || weekDay == null) {
+      console.log("estou em weekday");
+      days.style.border = "1px solid red";
+      if (hours == "" || hours == null) {
+        console.log("estou em hour");
+        time.style.border = "1px solid red";
+      }
+      return (activity.style.border = "1px solid red");
+    }
+  }
+  if (weekDay == "" || weekDay == null) {
+    console.log("estou em weekday");
+
+    if (hours == "" || hours == null) {
+      console.log("estou em hour");
+      time.style.border = "1px solid red";
+    }
+    return (days.style.border = "1px solid red");
+  }
+  if (hours == "" || hours == null) {
+    console.log("estou em hour");
+    return (time.style.border = "1px solid red");
+  }
+
+  dataBase.push({
+    hours: `${formatedHours}`,
+    textContent: `${textContent}`,
+    weekDay: `${weekDay}`,
+  });
+  listTasks();
+};
+
+const listTasks2 = () => {
+  clearListTask();
+
+  fic.forEach((task) => createTask(task.textContent, task.hours, task.weekDay));
+};
+const fic = [];
 
 //event
-document.addEventListener("click",e =>{
+document.addEventListener("click", (e) => {
   e.preventDefault();
-  const elemento  = e.target;
-  
-  if(elemento.classList.contains('day0')){
-   
-     
-    if(fic.length>0){
+  const elemento = e.target;
+
+  if (elemento.classList.contains("day0")) {
+    let day0 = document.querySelector(".day0");
+    day0.style.width = "167px";
+    day0.style.height = "36px";
+
+    if (fic.length > 0) {
       while (fic.length > 0) {
-        fic.pop()
+        fic.pop();
       }
     }
-    
-    dataBase.filter(task => task.weekDay == "Segunda-feira").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
+    dataBase
+      .filter((task) => task.weekDay == "Segunda-feira")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
     listTasks2();
-    
   }
 
-  if(elemento.classList.contains('day1')){
-   
-     
-    if(fic.length>0){
+  if (elemento.classList.contains("day1")) {
+    let day1 = document.querySelector(".day1");
+    day1.style.width = "167px";
+    day1.style.height = "36px";
+    if (fic.length > 0) {
       while (fic.length > 0) {
-        fic.pop()
+        fic.pop();
       }
     }
-    
-    dataBase.filter(task => task.weekDay == "Terça-feira").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
+    dataBase
+      .filter((task) => task.weekDay == "Terça-feira")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
     listTasks2();
-    
   }
-  if(elemento.classList.contains('day2')){
-   
-     
-    if(fic.length>0){
+  if (elemento.classList.contains("day2")) {
+    let day2 = document.querySelector(".day2");
+    day2.style.width = "167px";
+    day2.style.height = "36px";
+    if (fic.length > 0) {
       while (fic.length > 0) {
-        fic.pop()
+        fic.pop();
       }
     }
-    
-    dataBase.filter(task => task.weekDay == "Quarta-feira").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
+    dataBase
+      .filter((task) => task.weekDay == "Quarta-feira")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
     listTasks2();
-    
   }
-  if(elemento.classList.contains('day3')){
-   
-     
-    if(fic.length>0){
+  if (elemento.classList.contains("day3")) {
+    let day3 = document.querySelector(".day3");
+    day3.style.width = "167px";
+    day3.style.height = "36px";
+    if (fic.length > 0) {
       while (fic.length > 0) {
-        fic.pop()
+        fic.pop();
       }
     }
-    
-    dataBase.filter(task => task.weekDay == "Quinta-feira").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
+    dataBase
+      .filter((task) => task.weekDay == "Quinta-feira")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
     listTasks2();
-    
   }
-  if(elemento.classList.contains('day4')){
-   
-     
-    if(fic.length>0){
+  if (elemento.classList.contains("day4")) {
+    let day4 = document.querySelector(".day4");
+    day4.style.width = "167px";
+    day4.style.height = "36px";
+    if (fic.length > 0) {
       while (fic.length > 0) {
-        fic.pop()
+        fic.pop();
       }
     }
-    
-    dataBase.filter(task => task.weekDay == "Sexta-feira").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
+    dataBase
+      .filter((task) => task.weekDay == "Sexta-feira")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
     listTasks2();
-    
   }
-  if(elemento.classList.contains('day5')){
-   
-     
-    if(fic.length>0){
-      while (fic.length > 0) {
-        fic.pop()
-      }
-    }
-    
-    dataBase.filter(task => task.weekDay == "Sabado").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
-    listTasks2();
-    
-  }
-  if(elemento.classList.contains('day6')){
-   
-     
-    if(fic.length>0){
-      while (fic.length > 0) {
-        fic.pop()
-      }
-    }
-    
-    dataBase.filter(task => task.weekDay == "Domingo").map(task => fic.push(
-      {hours: `${task.hours}`,
-      textContent: `${task.textContent}`,
-      weekDay: `${task.weekDay}`,}
-    ));
-    listTasks2();
-    
-  }
- 
-  
-})
 
+  if (elemento.classList.contains("day5")) {
+    let day5 = document.querySelector(".day5");
+    day5.style.width = "167px";
+    day5.style.height = "36px";
+    if (fic.length > 0) {
+      while (fic.length > 0) {
+        fic.pop();
+      }
+    }
+    dataBase
+      .filter((task) => task.weekDay == "Sabado")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
+    listTasks2();
+  }
+  if (elemento.classList.contains("day6")) {
+    let day6 = document.querySelector(".day6");
+    day6.style.width = "167px";
+    day6.style.height = "36px";
+    if (fic.length > 0) {
+      while (fic.length > 0) {
+        fic.pop();
+      }
+    }
+    dataBase
+      .filter((task) => task.weekDay == "Domingo")
+      .map((task) =>
+        fic.push({
+          hours: `${task.hours}`,
+          textContent: `${task.textContent}`,
+          weekDay: `${task.weekDay}`,
+        })
+      );
+    listTasks2();
+  }
+});
 
 listTasks();
 buttonAdd.onclick = insertTask;

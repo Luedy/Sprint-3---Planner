@@ -70,7 +70,7 @@ header {
   
   .actions>.save {
     margin-right: 24px;
-    margin-left: 50px;
+    margin-left: 7rem;
 
     width: 180px;
     height: 40px;
@@ -152,6 +152,7 @@ header {
     border-radius: 10px;
     margin-left: 50px;
     padding-left: 89px;
+    
   }
   
   
@@ -329,6 +330,8 @@ header {
     transition: .5s;
     background: #f1902f;
   }
+
+ 
   
   .day1 {
     font-weight: 700;

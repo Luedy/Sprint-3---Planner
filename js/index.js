@@ -232,7 +232,7 @@ const insertTask = () => {
       (schedule) => schedule.hours == formatedHours
     );
     if (dataBase[ind].weekDay == weekDay) {
-      alert("horario contido");
+      alert("Horaio em choque!");
     }
   }
 

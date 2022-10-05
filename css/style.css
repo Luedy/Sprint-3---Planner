@@ -16,566 +16,557 @@ body {
 }
 
 
+
 header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 131px;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-  
-  }
-  
-  button {
-    border: none;
-  }
-  
-  
-  
-  .nav-bar {
-    width: 67%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-  }
-  
-  
-  
-  .title {
-    width: 588px;
-    height: 64px;
-    background: #6688FF;
-    border-radius: 0px 14px 15px 0px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: 74px;
-  
-  }
-  
-  .title h3,
-  p {
-    margin-left: 20px;
-  }
-  
-  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 131px;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+
+}
+
+button {
+  border: none;
+}
+
+
+
+.nav-bar {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+
+.title {
+  width: 588px;
+  height: 64px;
+  background: #6688FF;
+  border-radius: 0px 14px 15px 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 74px;
+
+}
+
+.title h3,
+p {
+  margin-left: 20px;
+}
+
+
 .actions {
-    display: flex;
-  
-  }
-  
-  .actions>.save {
-    margin-right: 24px;
-    margin-left: 7rem;
+  display: flex;
 
-    width: 180px;
-    height: 40px;
-    background: #2CBE82;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .save:hover {
-    background: #239465;
-    transition: .3s;
-  }
-  
-  .actions>.delete {
-    width: 180px;
-    height: 40px;
-    background: #DA2B40;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin-right: 88px;
-    cursor: pointer;
-  }
-  
-  .delete:hover {
-    background: #bb2436;
-    transition: .3s;
-  }
-  
-  .date-time {
-    width: 241px;
-    height: 61px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-  }
-  
-  
-  .time {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 20px;
-    margin-bottom: 15px;
-  
-  }
+}
 
-  
+.actions>.save {
+  margin-right: 74px;
+  width: 180px;
+  height: 40px;
+  background: #2CBE82;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save:hover {
+  background: #239465;
+  transition: .3s;
+}
+
+.actions>.delete {
+  width: 180px;
+  height: 40px;
+  background: #DA2B40;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 88px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: #bb2436;
+  transition: .3s;
+}
+
+.date-time {
+  width: 241px;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.time {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  margin-bottom: 15px;
+
+}
+
 .date {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  
-  .tools {
-    height: 44px;
-    width: 100%;
-    display: flex;
-  
-  }
-  
-  .activity {
-    background-color: white;
-    height: 44px;
-    width: 424px;
-    border: 1px solid #2CBE82;
-    border-radius: 10px;
-    margin-left: 50px;
-    padding-left: 89px;
-    
-  }
-  
-  
-  
-  .hours {
-    width: 102px;
-    height: 44px;
-    background-color: white;
-    border: 1px solid #2CBE82;
-    border-radius: 10px;
-    margin-left: 27px;
-    padding: 15px;
-    cursor: pointer;
-  
-  
-  }
-  
-  
-.add {
-    background: #2CBE82;
-    border-radius: 10px;
-    width: 222px;
-    height: 44px;
-    margin-left: 27px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .add:hover {
-    background: #239465;
-    transition: .3s;
-  }
-  
-  
-  .add img {
-    margin-right: 8px;
-  }
-  
-  .dell {
-    width: 184px;
-    height: 44px;
-    color: white;
-  
-    background: #DA2B40;
-    border-radius: 10px;
-    margin-left: 27px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .dell:hover {
-    background: #bb2436;
-    transition: .3s;
-  }
-  
-  .dell img {
-    margin-right: 8px;
-  }
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
 
-  /* .logo{
+.tools {
+  height: 44px;
+  width: 100%;
+  display: flex;
+
+}
+
+.activity {
+  background-color: white;
+  height: 44px;
+  width: 424px;
+  border: 1px solid #2CBE82;
+  border-radius: 10px;
+  margin-left: 50px;
+  padding-left: 89px;
+
+}
+
+
+
+.hours {
+  width: 102px;
+  height: 44px;
+  background-color: white;
+  border: 1px solid #2CBE82;
+  border-radius: 10px;
+  margin-left: 27px;
+  padding: 15px;
+  cursor: pointer;
+
+
+}
+
+.add {
+  background: #2CBE82;
+  border-radius: 10px;
+  width: 222px;
+  height: 44px;
+  margin-left: 27px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add:hover {
+  background: #239465;
+  transition: .3s;
+}
+
+
+.add img {
+  margin-right: 8px;
+}
+
+.dell {
+  width: 184px;
+  height: 44px;
+  color: white;
+
+  background: #DA2B40;
+  border-radius: 10px;
+  margin-left: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dell:hover {
+  background: #bb2436;
+  transition: .3s;
+}
+
+.dell img {
+  margin-right: 8px;
+}
+
+/* .logo{
   background-image: url("../images/bola-LogoCompasso_1.svg");
   width: 825px;
   height: 825px;
   background-size: cover;
   position: fixed;
-
 } */
 .main-section {
-    display: flex;
-    margin-top: 26px;
-    overflow-y: scroll;
-    height: 79%;
-    flex-direction: column;
-    background-image: url("../images/bola-LogoCompasso_1.svg");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 425px;
-  }
-  
-  .internal {
-    display: flex;
-    margin-top: 26px;
-    width: 100%;
-    flex-wrap: wrap;
-  
-  }
-  
-  
+  display: flex;
+  margin-top: 26px;
+  overflow-y: scroll;
+  height: 79%;
+  flex-direction: column;
+  background-image: url("../images/bola-LogoCompasso_1.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 425px;
+}
+
+.internal {
+  display: flex;
+  margin-top: 26px;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+
+
 
 .schedules {
-    height: 75px;
-    margin-right: 16px;
-  
-    margin-left: 16px;
-  
-  }
-  
-  .days-of-the-week {
-  
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    height: 75px;
-  
-  }
-  
-  .appointment {
-    width: 90px;
-    height: 75px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 16px;
-    margin-right: 16px;
-    padding: 10px !important;
-  
-  }
-  
-  .appointment h3 {
-    font-weight: 400;
-    font-size: 17px;
-  }
-  
-  .make-appointments {
-    width: 85px;
-    height: 75px;
-    margin-top: 9px;
-    background: #6688FF66;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .make-appointments p {
-    margin: 0 auto;
-  }
-  
-  
-  .make-appointments h6 {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-  
-  }
+  height: 75px;
+  margin-right: 16px;
 
-  
+  margin-left: 16px;
+
+}
+
+.days-of-the-week {
+
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  height: 75px;
+
+}
+
+.appointment {
+  width: 90px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 10px !important;
+
+}
+
+.appointment h3 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.make-appointments {
+  width: 85px;
+  height: 75px;
+  margin-top: 9px;
+  background: #6688FF66;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.make-appointments p {
+  margin: 0 auto;
+}
+
+
+.make-appointments h6 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+
+}
+
 .day0 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #FFA246;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #FFA246;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
 
-  .day0:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #f1902f;
-  }
+.day0:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #eb7f13;
+}
 
- 
-  
-  .day1 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #35E185;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day1:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #24aa63;
-  }
-  
-  .day2 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #6688FF;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day2:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #456cf8;
-  }
-  
-  .day3 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #B266FF;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day3:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #9d43f7;
-  }
-  
-  .day4 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #66D1FF;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day4:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #38bbf3;
-  }
-  
-  .day5 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #FF66D4;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day5:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #f53dc1;
-  }
-  
-  .day6 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    color: white;
-    width: 150px;
-    height: 33px;
-    background: #FF6666;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    border-radius: 9px 9px 0px 0px;
-    margin-right: 28px;
-    cursor: pointer;
-  }
-  
-  .day6:hover {
-    width: 157px;
-    height: 36px;
-    transition: .5s;
-    background: #f73f3f;
-  }
-  
-  
+.day1 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #35E185;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day1:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #09c962;
+}
+
+.day2 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #6688FF;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day2:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #2e54df;
+}
+
+.day3 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #B266FF;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day3:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #8a2de7;
+}
+
+.day4 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #66D1FF;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day4:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #37afe2;
+}
+
+.day5 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #FF66D4;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day5:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #cc3aa3;
+}
+
+.day6 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+  width: 150px;
+  height: 33px;
+  background: #FF6666;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.day6:hover {
+  width: 157px;
+  height: 36px;
+  transition: .5s;
+  background: #e23b3b;
+}
+
 .to-do-schedule {
-    display: flex;
-    align-items: center;
-  
-  }
-  
-  .task {
-    width: 512px;
-    height: 75px;
-    background: white;
-    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
-    backdrop-filter: blur(10.5px);
-    margin-left: 18px;
-    margin-top: 9px;
-    border-radius: 15px 15px 15px 15px;
-    display: flex;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  
-  }
-  
-  .taskMon {
-    border-left: 14px solid #FFA246;
-  }
-  
-  .taskTues {
-    border-left: 14px solid #35E185;
-  }
-  
-  .taskWednes {
-    border-left: 14px solid #6688FF;
-  }
-  
-  .taskThurs {
-    border-left: 14px solid #B266FF;
-  }
-  
-  .taskFri {
-    border-left: 14px solid #66D1FF;
-  }
-  
-  .taskSatur {
-    border-left: 14px solid #FF66D4;
-  }
-  
-  .taskSun {
-    border-left: 14px solid #FF6666;
-  }
-  
-  .out {
-    width: 57px;
-    height: 25px;
-    background: #98031E;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-right: 7px;
-    margin-left: 12px;
-    cursor: pointer;
-  }
-  
-  .content {
-    width: 90%;
-  }
-  
-  .task p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 12px;
-    margin-right: -6px;
-  }
-  
-  
-  .days {
-    width: 210px;
-    height: 44px;
-    border: 1px solid #2CBE82;
-    border-radius: 10px;
-    background-color: white;
-    margin-left: 27px;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
 
-  
+}
+
+.task {
+  width: 512px;
+  height: 75px;
+  background: white;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  backdrop-filter: blur(10.5px);
+  margin-left: 18px;
+  margin-top: 9px;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.taskMon {
+  border-left: 14px solid #FFA246;
+}
+
+.taskTues {
+  border-left: 14px solid #35E185;
+}
+
+.taskWednes {
+  border-left: 14px solid #6688FF;
+}
+
+.taskThurs {
+  border-left: 14px solid #B266FF;
+}
+
+.taskFri {
+  border-left: 14px solid #66D1FF;
+}
+
+.taskSatur {
+  border-left: 14px solid #FF66D4;
+}
+
+.taskSun {
+  border-left: 14px solid #FF6666;
+}
+
+.out {
+  width: 57px;
+  height: 25px;
+  background: #98031E;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-right: 7px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.content {
+  width: 90%;
+}
+
+.task p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin-right: -6px;
+}
+
+
+.days {
+  width: 210px;
+  height: 44px;
+  border: 1px solid #2CBE82;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 27px;
+  cursor: pointer;
+}
+
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .button {
-    padding: 10px 30px;
-    font-size: 15px;
-  }
-  
-  #list-items {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 185px;
-  }
-  
-  #list-items a {
-    display: block;
-    font-size: 18px;
-    background-color: #ddd;
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  #favourite {
-    display: none;
-  }
-  
+  position: relative;
+  display: inline-block;
+}
 
-  /* ===== Scrollbar CSS ===== */
+.button {
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+#list-items {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 185px;
+}
+
+#list-items a {
+  display: block;
+  font-size: 18px;
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#favourite {
+  display: none;
+}
+
+
+
+/* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
     scrollbar-width: auto;
